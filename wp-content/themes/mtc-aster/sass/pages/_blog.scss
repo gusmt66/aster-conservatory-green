@@ -1,0 +1,216 @@
+#blog, #category{
+	.content{
+		//.middle-content{
+
+			//.left{
+				//width:75%;
+				.post{
+					
+					.post-content{
+			    	padding: 0 0 80px;
+						display:flex;
+						flex-direction:column;
+						@include breakpoint(tablet){
+							flex-direction:row;
+						}
+						.post-link{
+							color:$black;
+						}
+						.image{
+					    border-radius: 10px;
+							@include breakpoint(tablet){
+								width:60%;
+							}
+							height:400px;
+							a{
+								display:block;
+								width:100%;
+								height:100%;
+								img{
+									@extend %thumb-image;
+								}								
+							}
+
+						}
+						.post-info{
+							padding: 20px 0 0 30px;
+							@include breakpoint(tablet){
+								width: 37.5%;
+								padding: 0 0 0 20px;
+							}
+							.post-title{
+								text-transform:uppercase;
+							  font-weight:$bold;
+							  line-height:1.3;
+							  margin:-10px 0 10px;
+								@include static-font-size($l);
+							  @include breakpoint(tablet){
+							    @include static-font-size($xl);
+							  }	
+							}
+							.post-date{
+								font-style:italic;
+								@include static-font-size($s);
+							  @include breakpoint(tablet){
+							    @include static-font-size($m);
+							  }	
+							}
+						}
+					}
+				}
+			//}
+			
+		//}
+	}
+}
+
+#single-post{
+	.content{
+		.post{
+			
+			.post-content{
+		    margin: 0 auto;
+				padding:0;
+				@include breakpoint(tablet){
+	    		padding: 40px 0;
+	    	}
+				//display:flex;
+				//width:90%;
+				.post-title{
+					letter-spacing:2px;
+					text-transform:uppercase;
+				  font-weight:$bold;
+				  line-height:1.5;
+				  margin:0 0 10px;
+					@include static-font-size($l);
+				  @include breakpoint(tablet){
+				    @include static-font-size($xl);
+				  }	
+				}
+				.image{
+					//width:60%;
+					margin:30px 0 0 0;
+					height:400px;
+					a{
+						img{
+							@extend %thumb-image;
+						}								
+					}
+
+				}
+				.post-info{
+					//width: 37.5%;
+					@extend %copy;
+					padding: 40px 0 15px 0;
+					ul{
+						li:before{
+							padding-right: 10px;
+						}
+						li{
+							padding: 0 0 0 1em;
+						}
+					}
+
+					.post-date{
+						text-transform: uppercase;
+						//font-family:$secondary-font;
+						font-weight:$bold;
+						@include static-font-size($xs);
+					  @include breakpoint(tablet){
+					    @include static-font-size($s);
+					  }	
+					}
+				}
+			}
+		}
+
+	}
+}
+
+
+
+
+
+#blog, #single-post, #category{
+	.content{
+
+		.middle-content{
+			position:relative;
+	    padding: 100px 20px;
+	    display:flex;
+	    flex-direction:column;
+	    @include breakpoint(ten){
+	    	flex-direction:row;
+	    }
+		}
+
+			.left{
+		    margin: 0 auto;
+				padding:0 0 30px 0;
+				width:90%;
+				@include breakpoint(ten){
+					width:70%;
+				}
+			}
+
+
+			.right{
+		    margin: 0 auto;
+				width:90%;
+				@include breakpoint(ten){
+					width:20%;
+				}
+				.sidebar{
+			    padding: 0 0 20px;
+					color:$secondary-color;			  
+				  text-transform:uppercase;
+				  font-weight:$bold;
+				  line-height:1;
+				  div{
+						margin:0 0 30px;
+						border-bottom: 1px solid $black;	
+				  }
+				  div:last-child{
+				  	border:0;
+				  	padding:0;
+				  	margin:0;
+				  }
+				  h2{
+				  	padding:0 0 30px;
+			  		@include static-font-size($m);
+					  @include breakpoint(tablet){
+					    @include static-font-size($l);
+					  }	
+				  }
+					ul{
+						li{
+							padding:0 0 30px;
+							a{
+								font-weight:$regular;
+								color:$secondary-color;
+								@include static-font-size($s);
+							  @include breakpoint(tablet){
+							    @include static-font-size($m);
+							  }	
+							}
+						}
+					}
+
+				}
+			}
+
+
+
+	}
+}
+
+#back-to-blog{
+	a{
+		@include static-font-size($m);
+		@include breakpoint(tablet){
+	    @include static-font-size($l);
+	  }	
+		text-transform:uppercase;
+		color:$secondary-color;		
+	}
+}

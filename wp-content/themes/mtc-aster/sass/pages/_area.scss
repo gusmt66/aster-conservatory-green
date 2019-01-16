@@ -1,0 +1,153 @@
+.page-template-neighborhood {
+
+  .title-content{
+    position: relative;
+    text-align: center;
+    display: table;
+    margin:0 auto;
+    @extend %subheadline;
+    border-bottom: 2px solid;
+    padding: 0 40px;
+    color:$secondary-color;
+  }
+
+  .middle-content{
+    position:relative;
+    padding: 50px 0;
+    .headline{
+      padding: 10px 50px;
+      @extend %subheadline;
+      color:$secondary-color;
+    }
+    .copy{
+      @extend %copy;
+      padding: 10px 50px;
+      column-count: 1;
+      @include breakpoint(tablet){
+        column-count:2;
+      }
+      ul{
+        li:before{
+          padding-right: 10px;
+        }
+        li{
+          padding: 0 0 0 1em;
+        }
+      }
+    }
+  }
+  
+  #map-container {
+    border-top: 4px solid $white;
+    position: relative;
+    .mobile-map {
+      .map-image {
+        height: 264px;
+        background-position: center;
+        display: block;
+        @include breakpoint(tablet) {
+          display: none;
+        }
+      }
+    }
+    #categories-container {
+      position: absolute;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+
+      top: 55px;
+      text-align: center;
+      z-index: 1;
+      display: none;
+      @include breakpoint(tablet) { display: block; }
+      ul#categories {
+        li {
+          min-width: 220px;
+          display: inline-block;
+          margin: 0 4px;
+          border: 2px solid $primary-color;
+          background: $white;
+          padding: 10px;
+          cursor: pointer;
+          @include box-sizing(border-box);
+          span {
+            // @include font-family($futura-book);
+            @include font(1.6, $primary-color);
+            text-transform: uppercase;
+          }
+          &:hover, &.active {
+            background: $primary-color;
+            border: 2px solid $white;
+            span {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+    #map {
+      display: none;
+      @include breakpoint(tablet) {
+        display: block;
+        height: 700px;
+      }
+    }
+  }
+
+  #neighborhood-links {
+    background: $secondary-color;
+    .link-wrapper {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      padding: 20px 0;
+      @include breakpoint(tablet){
+        padding: 100px 0;
+      }
+      //flex-direction:column;
+      // @include breakpoint(ten){
+      //   flex-direction:row;
+      // }
+      a.neighborhood {
+        display:none;
+        @include breakpoint(tablet){
+          display:block;
+          position: relative;
+          margin: 0 15px;
+          height: 300px;
+          width: 300px;
+          //border-radius: 10px;
+          -webkit-box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.4);
+          -moz-box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.4);
+          box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.4);
+        }
+        @include breakpoint(ten){
+          height: 310px;
+          width: 355px;
+        }
+        &:first-of-type { margin: 0 15px 0 0; }
+        &:last-of-type { margin: 0 0 0 15px; }
+        .overlay {
+          background: rgba($black, .5);
+          @extend %fill;
+          @extend .ease;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .link-text {
+            text-tranform: uppercase;
+            color: $white;
+          }
+        }
+        // img {}
+        &:hover {
+          .overlay {
+            background: rgba($black, .35);
+          }
+        }
+      }
+    }
+  }
+
+}

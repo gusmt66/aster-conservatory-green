@@ -1,0 +1,227 @@
+.info-columns-container{
+  padding:40px 0;
+  text-transform: uppercase;
+  line-height: 1.5;
+  @include flex;
+  @include flex-direction(column);
+  justify-content: center;
+  align-items: center;
+  @include breakpoint(ten){
+    @include flex-direction(row);
+  }
+  .col{
+    text-align: center;
+    //@include flex-item;
+    padding: 10px 0;
+    margin: 0 20px;
+    @include breakpoint(ten){
+      padding:0;
+    }
+    &.dots{
+      display: none;
+      @include breakpoint(ten){
+        display:block;
+      }
+    }
+  }
+
+}
+
+.frm_forms {
+  form {
+    .frm_submit {
+      .submit-button {
+        input[type="submit"] {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+#contact-form {
+  padding: 0 25px;
+  @include box-sizing(border-box);
+  @include breakpoint(tablet) {
+    padding: 0;
+  }
+  .frm_forms {
+    .apartment-type, .pets {
+      display: block;
+      @include breakpoint(tablet) {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.frm_forms {
+  max-width: 500px;
+  margin: 0 auto;
+  form {
+    .frm_message,.frm_error_style{
+      padding: 10px;
+      @include static-font-size(1.8);
+    }
+    .form-field {
+      position: relative;
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"],
+      select {
+        @include appearance(none);
+        @include box-sizing(border-box);
+        @include font-family($primary-font);
+        @include font(1.6,$secondary-color);
+        @include input-placeholder { color: $secondary-color; }
+        width: 100%;
+        padding: 25px 15px 15px;
+        background: none;
+        border: none;
+        border-radius: 0;
+        border-bottom: 2px solid $secondary-color;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        &:invalid, &:required, &:focus {
+          @include appearance(none);
+          box-shadow: none;
+          outline: none;
+        }
+        @include breakpoint(tablet) {
+          @include static-font-size(2);
+        }
+        &:focus{
+          @extend %input-focus;
+        }
+      }
+      .frm_error {
+        @include font-family($primary-font);
+        @include font(1.2, $gray);
+        text-align: center;
+        bottom: -15px;
+        position: absolute;
+      }
+    }
+    .form-bottom {
+      @include breakpoint(tablet) { margin: 45px 0 0; }
+      .apartment-type {
+        display: inline-block;
+        width: 100%;
+        select {
+          padding: 14px 15px;
+          border-radius: 0;
+          background: url('../images/select-arrow.png') center right 15px no-repeat transparent;
+          border: 0;
+          border-bottom: 2px solid $secondary-color;
+          @include breakpoint(tablet) {
+            border: 2px solid $secondary-color;
+          }
+        }
+        @include breakpoint(tablet) { width: calc(100% - 230px); }
+      }
+      .pets {
+        margin: 18px auto 0;
+        //width: 170px;
+        display: inline-block;
+        @include breakpoint(tablet) { margin: 18px 0 0; }
+        label {
+          @include font-family($primary-font);
+          @include font(2, $gray);
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          display: inline-block;
+          margin: 0 15px;
+          .frm_required { display: none; }
+        }
+        .frm_opt_container {
+          display: inline-block;
+          .frm_radio {
+            display: inline-block;
+            label {
+              @include font(1.5, $gray);
+              margin: 0;
+              border: 2px solid $secondary-color;
+              background: transparent;
+              @include transition(all .25s ease-in-out);
+              &:hover, &.clicked {
+                color: $white;
+                background: $secondary-color;
+              }
+            }
+            &:first-child {
+              margin: 0 10px 0 0;
+              label {
+                padding: 4px 5px 4px 6px;
+              }
+            }
+            &:last-child {
+              label { padding: 4px 3px 4px 5px; }
+            }
+            input[type="radio"] { 
+              //display: none;
+            }
+          }
+        }
+        .frm_error {
+          @include font-family($primary-font);
+          @include font(1.2, $gray);
+          margin: 5px 0px 0 8px;
+        }
+
+      }
+    }
+    .frm_submit {
+      margin: 45px 0 0;
+      clear: both;
+      .submit-button {
+        position: relative;
+        //margin: 0 auto;
+        width: 190px;
+        input[type="submit"] {
+          width: 100%;
+          @include font-family($primary-font);
+          @include static-font-size($xs);
+          color:$secondary-color;
+          font-weight:$bold;
+          @include breakpoint(tablet){
+            @include static-font-size($m);
+          }        
+          @include appearance(none);
+          @include transition(all .25s ease-in-out);
+          border-radius: 0;
+          text-transform: uppercase;
+          background: transparent;
+          padding: 14px 0;
+          border: 2px solid $secondary-color;
+        }
+        // &:before {
+        //   @include transition(all .25s ease-in-out);
+        //   content: " ";
+        //   position: absolute;
+        //   width: calc(100% - 72px);
+        //   height: calc(100% - 28px);
+        //   bottom: -6px;
+        //   right: -6px;
+        //   padding: 6px 0;
+        //   border-bottom: 2px solid $secondary-color;
+        //   border-right: 2px solid $secondary-color;
+        //   pointer-events: none;
+        // }
+        &:hover {
+          input[type="submit"] {
+            color: $white;
+            background: $secondary-color;
+            cursor: pointer;
+          }
+          // &:before {
+          //   width: calc(100% - 67px);
+          // }
+        }
+      }
+      .frm_ajax_loading {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}

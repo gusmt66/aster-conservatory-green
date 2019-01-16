@@ -1,0 +1,217 @@
+#home{
+	
+	.content{
+
+
+		.bottom-section-container{
+			position:relative;
+			padding:10% 0;
+			background-color:$secondary-color;
+			@include breakpoint(tablet){
+				padding:6% 0;
+			}
+			.content{
+
+	    	.image-container-mobile{
+					@extend %featured-thumbnail-mobile;
+				}
+
+				.rows-content{
+					padding:80px 0;
+					display: flex;
+			    flex-direction: column;
+			    align-items: center;
+					@include breakpoint(ten){
+						padding:40px 0 120px 0;
+					}
+					&.odd{
+	    			align-items: center;
+	    			@include breakpoint(ten){
+							align-items: flex-end;
+						}
+	    		}
+	    		&.even{
+						align-items: center;
+						@include breakpoint(ten){
+							align-items: flex-start;
+						}
+			    }
+					.row{
+
+				    .main-icon{
+				      margin: 0 auto;
+				      width:70px;
+				      @include breakpoint(tablet){
+				        width:90px;
+				      }
+				    }
+				    .button-container{
+				      padding: 20px 0 40px 0;
+				      text-align:center;
+				    }
+
+						.col{
+							padding: 0 20px;
+							@include breakpoint(ten){
+	    					width: 50%;
+	    				}
+					    .headline{
+					      @extend %headline;
+					      padding: 15px 0;
+					      text-align:center;
+					      color:$white;
+					    }
+					    .copy{
+					      @extend %copy;
+					      padding: 0 0 20px 0;
+					      text-align:center;
+					      color:$white;
+					      p{
+					        margin:0 0 25px;
+					      }
+					      ul{
+					      	li:before{
+			      		    padding-right: 10px;
+					      	}
+					      	li{
+					      		padding: 0 0 0 1em;
+					      	}
+					      }
+					    }
+					    &.left{
+
+					    }
+					    &.right{
+					    	display: flex;
+	    					align-items: center;
+	    					.image-container-desktop{
+									@extend %featured-thumbnail;
+	    					}
+					    }
+						}
+						&.flex-content{
+							display:flex;
+					    width: 100%;
+					    &.odd{
+								flex-direction: column;
+								@include breakpoint(ten){
+									flex-direction: row-reverse;
+								}
+					    }
+					    &.even{
+								flex-direction: column;
+								@include breakpoint(ten){
+									flex-direction: row;
+								}
+					    }
+						}
+					}
+				}
+			}
+			.water-container{
+				position: absolute;
+    		height: 150px;
+    		width: 100%;
+    		overflow:hidden;
+
+				// height:200px;
+    // 		bottom: -165px;
+
+
+				// bottom: -80px;
+				// @include breakpoint(five){
+				// 	bottom: -75px;
+				// }
+				 //@include breakpoint(sixteen){
+				 	//height: 200px;
+				// 	bottom: -120px;
+				 //}
+    		img{
+			    //height: 100%;
+			    width:100%;
+			    //margin-left: -2%;
+
+			     // object-fit: cover;
+			     // width: 100%;
+			     // object-position: top;
+
+    		}
+			}
+		}
+
+		.tour-container{
+	    z-index: 1;
+	    padding: 5px 0 0 0;
+			position:relative;
+			//height:240px;
+
+			//@include breakpoint(tablet){
+	    	//padding: 5px 0 0 0;
+	    //}
+	    &__background-top{
+	    	overflow:hidden;
+	    	line-height: 0;
+   	    margin-bottom: -1px;
+	    	img{
+	    		width: 102%;
+    			margin-left: -1%;
+	    	}
+	    }
+	    &__background-bottom{
+	    	line-height: 0;
+	    	overflow:hidden;
+	    	position: absolute;
+			  width: 100%;
+			  margin-top: -1px;
+	    	img{
+	    		width: 102%;
+    			margin-left: -1%;
+	    	}
+	    }
+			// &__background{
+		 //    z-index: -1;
+			// 	position:absolute;
+			// 	top:0;
+			// 	left:0;
+			// 	width:100vw;
+			// 	img{
+			// 		width:100%;
+			//     //height: 330px;
+			//     @include breakpoint(tablet){
+			//     	//height: 450px;
+			//     }
+			// 	}
+			// }
+
+			&__content{
+				z-index:0;
+				background-color:#E6E5E5;
+				// position:absolute;
+				// left: 0;
+    // 		right: 0;
+				.tour-icon{
+		      margin: 0 auto;
+		      width:70px;
+		      @include breakpoint(tablet){
+		        width:90px;
+		      }
+				}
+				.tour-button{
+					padding:40px 0 0 0;
+					text-align:center;
+				}
+
+			}
+
+		}
+
+		.bottom-image-container{
+			padding-top: 25px;
+			line-height: 0;
+			img{
+				width:100%;
+			}
+		}
+
+	}
+}

@@ -1,0 +1,91 @@
+[30-Jul-2018 18:41:25 UTC] PHP Fatal error:  Cannot redeclare print_trigger() (previously declared in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php:34) in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 104
+[30-Jul-2018 19:27:33 UTC] PHP Fatal error:  Call to undefined function print_slideout1_() in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 192
+[31-Jul-2018 14:42:31 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 255
+[31-Jul-2018 14:46:12 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 255
+[31-Jul-2018 14:49:55 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 255
+[31-Jul-2018 14:53:33 UTC] PHP Fatal error:  Call to undefined function print_property_name() in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 269
+[31-Jul-2018 14:57:30 UTC] PHP Fatal error:  Call to undefined function print_phone() in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 280
+[31-Jul-2018 14:59:07 UTC] PHP Fatal error:  Call to undefined function print_phone() in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 280
+[31-Jul-2018 14:59:13 UTC] PHP Fatal error:  Call to undefined function print_phone() in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 280
+[31-Jul-2018 14:59:17 UTC] PHP Fatal error:  Call to undefined function print_phone() in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 280
+[31-Jul-2018 15:03:53 UTC] PHP Fatal error:  Call to undefined function print_phone() in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 280
+[31-Jul-2018 15:04:42 UTC] PHP Fatal error:  Call to undefined function print_footer_logos() in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 285
+[31-Jul-2018 15:04:44 UTC] PHP Fatal error:  Call to undefined function print_footer_logos() in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 285
+[01-Aug-2018 18:51:48 UTC] PHP Fatal error:  Call to undefined function print_slideout_1() in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 272
+[04-Aug-2018 13:00:03 UTC] PHP Fatal error:  Call to undefined function print_mobile_availability() in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 55
+[04-Aug-2018 13:00:04 UTC] PHP Fatal error:  Call to undefined function print_mobile_availability() in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 55
+[06-Aug-2018 12:26:32 UTC] PHP Fatal error:  Call to undefined function print_mobile_availability() in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 55
+[06-Aug-2018 13:20:02 UTC] PHP Fatal error:  Call to undefined function print_mobile_availability() in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 55
+[06-Aug-2018 13:20:03 UTC] PHP Fatal error:  Call to undefined function print_mobile_availability() in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 55
+[06-Aug-2018 16:36:22 UTC] PHP Fatal error:  Call to undefined function print_mobile_specials() in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 56
+[06-Aug-2018 16:36:24 UTC] PHP Fatal error:  Call to undefined function print_mobile_specials() in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 56
+[06-Aug-2018 16:36:30 UTC] PHP Fatal error:  Call to undefined function print_mobile_specials() in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 56
+[06-Aug-2018 16:36:31 UTC] PHP Fatal error:  Call to undefined function print_mobile_specials() in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 56
+[06-Aug-2018 16:53:01 UTC] PHP Warning:  Missing argument 1 for print_availability(), called in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 51 and defined in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 191
+[06-Aug-2018 16:53:02 UTC] PHP Warning:  Missing argument 1 for print_availability(), called in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 51 and defined in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 191
+[08-Aug-2018 18:41:47 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 122
+[08-Aug-2018 18:41:59 UTC] PHP Fatal error:  Cannot redeclare print_button() (previously declared in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php:22) in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 122
+[08-Aug-2018 20:41:31 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 157
+[09-Aug-2018 18:58:17 UTC] PHP Fatal error:  Call to undefined function print_bottom_image() in /home/astermtc/public_html/wp-content/themes/mtc-aster/front-page.php on line 15
+[09-Aug-2018 18:58:23 UTC] PHP Fatal error:  Call to undefined function print_bottom_image() in /home/astermtc/public_html/wp-content/themes/mtc-aster/front-page.php on line 15
+[14-Aug-2018 18:06:21 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/astermtc/public_html/wp-content/themes/mtc-aster/functions.php on line 215
+[15-Aug-2018 01:45:08 UTC] PHP Fatal error:  Call to undefined function print_header_icons() in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 40
+[15-Aug-2018 01:59:12 UTC] PHP Fatal error:  Call to undefined function print_header_icons() in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 40
+[15-Aug-2018 02:00:24 UTC] PHP Fatal error:  Call to undefined function print_header_icons() in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 40
+[15-Aug-2018 02:08:14 UTC] PHP Fatal error:  Call to undefined function print_header_icons() in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 40
+[15-Aug-2018 02:10:40 UTC] PHP Fatal error:  Call to undefined function print_header_icons() in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 40
+[15-Aug-2018 02:11:08 UTC] PHP Fatal error:  Call to undefined function print_home_bottom_section() in /home/astermtc/public_html/wp-content/themes/mtc-aster/front-page.php on line 13
+[15-Aug-2018 12:48:41 UTC] PHP Fatal error:  Call to undefined function print_features_content() in /home/astermtc/public_html/wp-content/themes/mtc-aster/page-templates/features.php on line 12
+[15-Aug-2018 12:48:50 UTC] PHP Fatal error:  Call to undefined function print_home_bottom_section() in /home/astermtc/public_html/wp-content/themes/mtc-aster/front-page.php on line 13
+[15-Aug-2018 13:04:41 UTC] PHP Fatal error:  Call to undefined function print_home_bottom_section() in /home/astermtc/public_html/wp-content/themes/mtc-aster/front-page.php on line 13
+[15-Aug-2018 13:07:23 UTC] PHP Fatal error:  Call to undefined function print_home_bottom_section() in /home/astermtc/public_html/wp-content/themes/mtc-aster/front-page.php on line 13
+[15-Aug-2018 13:07:44 UTC] PHP Fatal error:  Call to undefined function print_home_bottom_section() in /home/astermtc/public_html/wp-content/themes/mtc-aster/front-page.php on line 13
+[15-Aug-2018 13:07:45 UTC] PHP Fatal error:  Call to undefined function print_gray_top() in /home/astermtc/public_html/wp-content/themes/mtc-aster/page-templates/gallery.php on line 14
+[15-Aug-2018 13:08:00 UTC] PHP Fatal error:  Call to undefined function print_home_bottom_section() in /home/astermtc/public_html/wp-content/themes/mtc-aster/front-page.php on line 13
+[15-Aug-2018 13:09:10 UTC] PHP Fatal error:  Call to undefined function print_home_bottom_section() in /home/astermtc/public_html/wp-content/themes/mtc-aster/front-page.php on line 13
+[15-Aug-2018 13:09:44 UTC] PHP Fatal error:  Call to undefined function print_availability() in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 51
+[15-Aug-2018 13:09:49 UTC] PHP Fatal error:  Call to undefined function print_availability() in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 51
+[15-Aug-2018 13:09:51 UTC] PHP Fatal error:  Call to undefined function print_availability() in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 51
+[15-Aug-2018 13:09:53 UTC] PHP Fatal error:  Call to undefined function print_availability() in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 51
+[15-Aug-2018 13:09:54 UTC] PHP Fatal error:  Call to undefined function print_availability() in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 51
+[15-Aug-2018 13:09:55 UTC] PHP Fatal error:  Call to undefined function print_availability() in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 51
+[15-Aug-2018 13:10:00 UTC] PHP Fatal error:  Call to undefined function print_availability() in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 51
+[15-Aug-2018 13:10:01 UTC] PHP Fatal error:  Call to undefined function print_availability() in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 51
+[15-Aug-2018 13:10:02 UTC] PHP Fatal error:  Call to undefined function print_availability() in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 51
+[15-Aug-2018 13:10:04 UTC] PHP Fatal error:  Call to undefined function print_availability() in /home/astermtc/public_html/wp-content/themes/mtc-aster/header.php on line 51
+[16-Aug-2018 16:49:54 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/astermtc/public_html/wp-content/themes/mtc-aster/functions.php on line 124
+[17-Aug-2018 20:49:13 UTC] PHP Warning:  Illegal string offset 'url' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 15
+[17-Aug-2018 20:49:13 UTC] PHP Warning:  Illegal string offset 'alt' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 15
+[17-Aug-2018 20:49:32 UTC] PHP Warning:  Illegal string offset 'url' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 15
+[17-Aug-2018 20:49:32 UTC] PHP Warning:  Illegal string offset 'alt' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 15
+[17-Aug-2018 20:49:36 UTC] PHP Warning:  Illegal string offset 'url' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 15
+[17-Aug-2018 20:49:36 UTC] PHP Warning:  Illegal string offset 'alt' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 15
+[17-Aug-2018 20:49:37 UTC] PHP Warning:  Illegal string offset 'url' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 15
+[17-Aug-2018 20:49:37 UTC] PHP Warning:  Illegal string offset 'alt' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 15
+[17-Aug-2018 20:58:21 UTC] PHP Warning:  Illegal string offset 'url' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 15
+[17-Aug-2018 20:58:21 UTC] PHP Warning:  Illegal string offset 'alt' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 15
+[17-Aug-2018 20:58:23 UTC] PHP Warning:  Illegal string offset 'url' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 15
+[17-Aug-2018 20:58:23 UTC] PHP Warning:  Illegal string offset 'alt' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 15
+[17-Aug-2018 20:58:33 UTC] PHP Warning:  Illegal string offset 'url' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 15
+[17-Aug-2018 20:58:33 UTC] PHP Warning:  Illegal string offset 'alt' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 15
+[17-Aug-2018 21:00:26 UTC] PHP Warning:  Illegal string offset 'url' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 15
+[17-Aug-2018 21:00:26 UTC] PHP Warning:  Illegal string offset 'alt' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 15
+[17-Aug-2018 21:01:33 UTC] PHP Warning:  Illegal string offset 'url' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 15
+[17-Aug-2018 21:01:33 UTC] PHP Warning:  Illegal string offset 'alt' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 15
+[17-Aug-2018 21:07:14 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 473
+[20-Aug-2018 00:56:07 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 479
+[20-Aug-2018 14:49:02 UTC] PHP Warning:  Missing argument 1 for wp_get_post_parent_id(), called in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 482 and defined in /home/astermtc/public_html/wp-includes/post.php on line 6205
+[20-Aug-2018 14:49:02 UTC] PHP Warning:  Missing argument 1 for wp_get_post_parent_id(), called in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 483 and defined in /home/astermtc/public_html/wp-includes/post.php on line 6205
+[08-Oct-2018 11:05:03 UTC] PHP Warning:  file_put_contents(): Only 0 of 22498 bytes written, possibly out of free disk space in /home/astermtc/public_html/realPageAPIfloorplansJSON.php on line 23
+[08-Oct-2018 11:05:08 UTC] PHP Warning:  file_put_contents(): Only 0 of 97022 bytes written, possibly out of free disk space in /home/astermtc/public_html/realPageAPIunitsJSON.php on line 34
+[08-Oct-2018 12:05:02 UTC] PHP Warning:  file_put_contents(): Only 0 of 22498 bytes written, possibly out of free disk space in /home/astermtc/public_html/realPageAPIfloorplansJSON.php on line 23
+[08-Oct-2018 12:05:06 UTC] PHP Warning:  file_put_contents(): Only 0 of 97022 bytes written, possibly out of free disk space in /home/astermtc/public_html/realPageAPIunitsJSON.php on line 34
+[12-Oct-2018 18:05:03 UTC] PHP Warning:  file_put_contents(): Only 0 of 22498 bytes written, possibly out of free disk space in /home/astermtc/public_html/realPageAPIfloorplansJSON.php on line 23
+[12-Oct-2018 18:05:06 UTC] PHP Warning:  file_put_contents(): Only 0 of 116674 bytes written, possibly out of free disk space in /home/astermtc/public_html/realPageAPIunitsJSON.php on line 34
+[05-Dec-2018 18:19:01 UTC] PHP Fatal error:  Call to undefined function get_title() in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 595
+[05-Dec-2018 18:27:44 UTC] PHP Warning:  Illegal string offset 'url' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 15
+[05-Dec-2018 18:27:44 UTC] PHP Warning:  Illegal string offset 'alt' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 15
+[06-Dec-2018 16:38:13 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 224
+[06-Dec-2018 16:51:18 UTC] PHP Parse error:  syntax error, unexpected '!', expecting '(' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php on line 362
+[12-Dec-2018 15:22:17 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php(523) : eval()'d code on line 1
+[12-Dec-2018 15:22:17 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/astermtc/public_html/wp-content/themes/mtc-aster/incl/custom-functions.php(523) : eval()'d code on line 1

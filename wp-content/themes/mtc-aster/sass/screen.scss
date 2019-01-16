@@ -1,0 +1,352 @@
+@import "compass/reset";
+@import "compass/utilities";
+@import "compass/css3";
+@import "modules/variables";
+@import "modules/mixins";
+@import "modules/extends";
+
+@import "modules/fonts";
+
+@import "pages/header";
+@import "pages/footer";
+@import "pages/slideouts";
+@import "pages/hero";
+@import "pages/home";
+@import "pages/features";
+@import "pages/amenities";
+@import "pages/gallery";
+@import "pages/area";
+@import "pages/floorplans";
+@import "pages/contact";
+@import "pages/blog";
+@import "pages/fc_guarantee";
+
+
+.ease { @include transition(all .25s ease-in-out); }
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+  //scroll-behavior: smooth; //doesn't work with safari or ie.
+}
+
+body {
+  background-color: $light-gray;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family:$primary-font;
+  font-weight:$regular;
+
+
+  // Set initial font size to 1.5rem (15px) for all elements.
+  @include static-font-size(1.5);
+
+  /* Include to adjust font sizes according to screen size */
+  @include breakpoint(tablet) {
+    font-size: $base-font-size*1.2;
+    //line-height: $base-line-height*1.2;
+  }
+
+  @include breakpoint(ten) {
+    font-size: $base-font-size*1.3;
+  }
+
+  @include breakpoint(fourteen) {
+    font-size: $base-font-size*1.4;
+  }
+
+  @include breakpoint(sixteen) {
+    font-size: $base-font-size*1.5;
+  }
+
+  @include breakpoint(nineteen) {
+    font-size: $base-font-size*1.6;
+  }
+  /* ****************** */
+
+  &.logged-in {
+    padding-top: 46px;
+    @media screen and ( min-width: 782px ) {
+      padding-top: 32px;
+    }
+    #nav-trigger {
+      top:80px;
+      @media screen and ( min-width: 782px ) {
+        top:58px;
+      }
+      &.scroll{
+        @media screen and ( min-width: 782px ) {
+          top:87px;
+        }
+      }
+    }
+  }
+  .wrapper{
+    margin:0 auto;
+    max-width:1260px;
+  }
+  a{
+    text-decoration:none;
+    cursor:pointer;
+  }
+  .desktop{
+    display:none;
+    @include breakpoint(tablet){
+      display:block;
+    }
+  }
+  .mobile{
+    display:block;
+    @include breakpoint(tablet){
+      display:none;
+    }
+  }
+  .btn{
+    display: inline-block;
+    min-width: 100px;
+    text-align: center;
+    text-transform:uppercase;
+    font-weight:$bold;
+    a{
+      padding: 10px 20px;
+      display:block;
+    }
+    &.btn-primary{
+      //background-color:$white;
+      border: 2px solid $secondary-color;
+      a{
+        color:$secondary-color;
+      }
+      &:hover{
+        background-color:$secondary-color;
+        a{
+          color:$white;
+        }
+      }
+    }
+    &.btn-secondary{
+      border: 2px solid $white;
+      background-color:$secondary-color;
+      a{
+        color:$white;
+      }
+      &:hover{
+        background-color:$white;
+        a{
+          color:$secondary-color;
+        }
+      }
+    }
+    &.small{
+      a{
+        @include static-font-size($xs);
+        @include breakpoint(tablet){
+          @include static-font-size($m);
+        }        
+      }
+    }
+    &.large{
+      a{
+        padding:20px 40px;
+        min-width: 100px;
+        @include static-font-size($m);
+        @include breakpoint(tablet){
+          padding:20px;
+          min-width: 300px;
+          @include static-font-size($l);
+        } 
+      }
+    }
+  }
+  .half-width{
+    width:50%;
+  }
+  .full-width{
+    width:100%;
+  }
+  .gray-divider{
+    position:relative;
+  }
+  .bg-cover{
+    background-size:cover;
+    background-position: center center;
+    width:100%;
+    img{
+      display:none;
+    }
+  }
+
+  .mountains-container{
+    width: 100%;
+    left: 0;
+    position:relative;
+    height:40px;
+    @include breakpoint(mobile){
+      height:35px;
+    }
+    @include breakpoint(mobileL){
+      height:54px;
+    }
+    @include breakpoint(five){
+      height:66px;
+    }
+    @include breakpoint(tablet){
+      height:87px;
+    }
+    @include breakpoint(ten){
+      height:115px;
+    }
+    @include breakpoint(twelve){
+      height:140px;
+    }
+    @include breakpoint(fourteen){
+      height:160px;
+    }
+    @include breakpoint(sixteen){
+      height:190px;
+    }
+    @include breakpoint(nineteen){
+      height:220px;
+    }
+    .mountain-back,
+    .mountain-front1,
+    .mountain-front2{
+      position: absolute;
+      width:100%;
+      overflow:hidden;
+      img{
+        //width: 110%;
+        //margin-left: -2%;
+        width: 100%;
+      }
+    }
+    .mountain-front1{
+      top: 16%;
+    }
+    .mountain-front2{
+      top: 40%;
+    }
+  }
+
+  .buttons-container{
+    padding: 60px 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include breakpoint(tablet){
+      padding: 100px 40px;
+    }
+    .btn{
+      margin: 20px 40px;
+    }
+  }
+
+  .bottom-image-container{
+    position:relative;
+    padding-top: 60px;
+    background-color:$secondary-color;
+    height: 450px;
+    @include breakpoint(tablet){
+      height: 600px;
+    }
+    @include breakpoint(ten){
+      height: 750px;
+    }
+    @include breakpoint(twelve){
+      height: 900px;
+    }
+    @include breakpoint(fourteen){
+      height: 1100px;
+    }
+    @include breakpoint(sixteen){
+      height: 1300px;
+    }      
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+}
+
+.ease { @include transition(all .25s ease-in-out); }
+
+// Site-wide CSS and reuseable classes are here.
+@import "modules/classes";
+
+// Add page specific files here.
+// @import "pages/pagename";
+
+
+/* MAIN SECTION for several pages */
+.gray-bg-container{
+  position: absolute;
+  overflow:hidden;
+  width:100%;
+  top: -10px;
+  @include breakpoint(tablet){
+    top: -20px;
+  }
+  @include breakpoint(ten){
+    //top: -40px;
+  }
+  img{
+    height: 100%;
+    width: 110%;
+    margin-left: -5%;
+    overflow:hidden;
+  }
+}
+
+.top-section-container{
+  position:relative;
+  .content{
+    position:relative;
+    padding: 50px 50px 60px 50px;
+    @include breakpoint(tablet){
+      padding: 50px 50px 100px 50px;
+    }
+    .main-icon{
+      margin: 0 auto;
+      width:70px;
+      @include breakpoint(tablet){
+        width:90px;
+      }
+    }
+    .headline{
+      @extend %headline;
+      padding: 15px 0;
+      text-align:center;
+      color:$secondary-color;
+    }
+    .copy{
+      @extend %copy;
+      padding: 0 0 20px 0;
+      text-align:center;
+      p{
+        margin:0 0 25px;
+      }
+      ul{
+        li:before{
+          padding-right: 10px;
+        }
+        li{
+          padding: 0 0 0 1em;
+        }
+      }
+    }
+    .button-container{
+      padding: 20px 0 40px 0;
+      text-align:center;
+    }
+  }
+}
+
+#online-leasing{
+  .content{
+    #top-section{
+      padding:150px 0 0 0;
+    }
+  }
+}

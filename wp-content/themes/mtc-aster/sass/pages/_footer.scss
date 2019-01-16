@@ -1,0 +1,118 @@
+#footer{
+	background-color:$secondary-color;
+	color:$white;
+	.content{
+		letter-spacing: 2px;
+
+		.top-container{
+			display:none;
+			@include breakpoint(tablet){
+				display:block;
+			}
+			@include static-font-size(0.9);
+			text-transform: uppercase;
+			padding: 40px;
+    	text-align: center;
+    	a{
+    		color:$white;
+    	}
+		}
+		.middle-container{
+			display:flex;
+			justify-content: center;
+    	align-items: center;
+    	flex-direction:column;
+    	padding: 60px 0;
+			@include breakpoint(tablet){
+				flex-direction:row;
+		    padding: 0;
+			}
+			.row{
+		    padding: 25px 0;
+		    @include breakpoint(tablet){
+		    	padding:0;
+		    }
+			}
+			.col{
+				width:90%;
+				text-align:center;
+				@include breakpoint(tablet){
+					width:33%;	
+				}
+			}
+			.footer-logos-container{
+				display: flex;
+    		align-items: center;
+    		justify-content:center;
+				padding-top:30px;
+				@include breakpoint(tablet){
+					//display:block;
+					padding:0;
+				}
+				a,span{
+					color:$white;
+					padding-right:10px;
+				}
+				span{
+					//margin-top: 16px;
+					@include breakpoint(tablet){
+						margin:0;
+					}
+				}
+				img{
+					max-height: 30px;
+				}
+			}
+			.property-info-container{
+				@include static-font-size($xs);
+		    line-height: 1.5;
+				text-transform: uppercase;
+				@include breakpoint(tablet){
+					border-left: 1px solid $white;
+					border-right: 1px solid $white;
+				}
+				.property-name{
+					font-weight:$bold;
+				}
+				.address{
+					a{
+						color:$white;
+					}
+				}
+				.phone{
+					a{
+						color:$white;
+					}
+				}
+			}
+			.icon-forest-city-logo{
+		    @include static-font-size(4.0);
+		  }
+
+		}
+		.bottom-container{
+			text-align:center;
+			@include breakpoint(tablet){
+				padding: 40px;
+			}
+			#privacy,
+			#resident{
+				@include static-font-size($xxs);
+		    line-height: 1.5;
+				text-transform: uppercase;
+				a{
+					color:$white;
+				}
+			}
+		}
+	}
+
+	.social-icons{
+    a{
+    	@include static-font-size($l);
+      color:$white;
+      margin:0 15px;
+    }
+  }
+
+}

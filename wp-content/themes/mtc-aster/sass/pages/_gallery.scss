@@ -1,0 +1,236 @@
+
+.page-template-gallery {
+  height:100%;
+  #gallery-container {
+    position: relative;
+    margin: 0 auto;
+    padding: 80px 0 10px 0;
+    //margin-top: -20px;
+    .content-arrow {
+      display: none;
+      @include breakpoint(tablet) {
+        display: block;
+        height: 45px;
+      }
+    }
+
+    #buildings{
+      position:relative;
+      width:89%;
+      margin: 0 auto;
+      padding: 15px 0;
+      border-bottom: 2px solid $primary-color;
+      margin-bottom: 50px;
+      .form-radio {
+        display: inline-block;
+        margin-left:20px;
+        @include static-font-size($xs);
+        text-transform: uppercase;
+        color: $secondary-color;
+        font-weight: $bold;
+        label {
+          margin-right:5px;
+          padding:0 8px;
+          @include static-font-size($xs);
+          border: 2px solid $secondary-color;
+          background: transparent;
+          @include transition(all .25s ease-in-out);
+          &:hover, &.clicked {
+            color: $white;
+            background: $secondary-color;
+          }
+        }
+
+        input[type="radio"] { display: none; }
+
+      }
+    }
+
+    #categories {
+      @extend %cf;
+      position: relative;
+      text-align: center;
+      z-index:1;
+      padding: 0 0 30px;
+      border-bottom: 1px solid $light-gray;
+      li {
+        @include transition(all 0.25s ease-in-out);
+        @include font-family($primary-font);
+        @include font(1.5, $secondary-color);
+        font-weight:$bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-color: transparent;
+        display: block;
+        cursor: pointer;
+        border: 2px solid $secondary-color;
+        padding: 10px;
+        max-width: 215px;
+        text-align: center;
+        margin: 0 auto 5px;
+        &:hover, &.active {
+          background: $secondary-color;
+          color: $white;
+        }
+        @include breakpoint(tablet) {
+          display: inline-block;
+          min-width: 15%;
+          margin: 0 5px;
+          @include static-font-size(1.6);
+          &:first-child { margin-left: 0; }
+          &:last-child { margin-right: 0; }
+        }
+        @include breakpoint(ten) { min-width: 215px; }
+      }
+    }
+    #overlap {
+      position:relative;
+      z-index: 1;
+      @include breakpoint(tablet) {
+        margin: 0 50px;
+        min-height: calc(100% - 420px);
+      }
+      #gallery-wrapper {
+        text-align: center;
+        #gallery {
+          #loader {
+            @include static-font-size(4);
+            color: $white;
+            text-align: center;
+          }
+          #image-container {
+
+            @extend %cf;
+            a{
+              img{
+                @include box-sizing(border-box);
+                @include static-font-size(0);
+                display: inline-block;
+                width: calc(100% - 20px);
+                border: 1px solid $secondary-color;
+                border-radius:6px;
+                margin: 5px 10px;
+                cursor: pointer;
+                position: relative;
+                @include breakpoint(tablet) {
+                  width: 270px; //225px
+                  height: 190px;
+                  margin: 7px;
+                  object-fit: cover;
+                  object-position: center;
+                }
+                &.active {
+                  @include breakpoint(phones){
+                    display: block;
+                    position: relative;
+                    z-index: 2;
+                  }
+                }
+                img {
+                  width: 100%;
+                  height: auto;
+                  &.thumb-image {
+                    display: none;
+                    @include breakpoint(tablet){
+                      display: block;
+                    }
+                  }
+                  &.full-image {
+                    display: block;
+                    @include breakpoint(tablet){
+                      display: none;
+                    }
+                  }
+                }
+              }
+            }
+
+          }
+          #next-image,
+          #prev-image {
+            display: none;
+            position: absolute;
+            top: 50%;
+            width: 30px;
+            height: 100px;
+            margin-top: -50px;
+            background-color: $secondary-color;
+            background-repeat: no-repeat;
+            background-position: center;
+            border: none;
+            cursor: pointer;
+            z-index: 2;
+          }
+          #prev-image {
+            left: 0;
+            //background-image: url(../images/bixby-mini-gallery-prev.png);
+          }
+          #next-image {
+            right: 0;
+            //background-image: url(../images/bixby-mini-gallery-next.png);
+          }
+        }
+      }
+    }
+  }
+
+
+  //Overwriting featherlight styles
+  .featherlight{
+
+    .featherlight-content{
+       padding:0; 
+       border:0; 
+       margin-left: auto; 
+       margin-right: auto;
+       .featherlight-next{
+        right:0;
+        span{
+          font-size: 40px;
+          width: 50px;
+          height: 50px;
+          line-height: 1;
+          padding-top: 4px;
+          background-color: $secondary-color;
+          right: -5px;
+        }
+       } 
+       .featherlight-previous{
+          left:0;
+          span{
+          font-size: 40px;
+          width: 50px;
+          height: 50px;
+          line-height: 1;
+          padding-top: 4px;
+          background-color: $secondary-color;
+          left: -5px;
+        }
+       }
+       .featherlight-next:hover, 
+       .featherlight-previous:hover{
+        overflow:hidden;
+        background:none;
+       }
+       .featherlight-close-icon{
+          top: 10px;
+          right: 10px;
+          background:none;
+          color:$white;
+          @include static-font-size($xl);
+       }
+      .caption{
+        position: relative;
+        bottom: 0;
+        text-align: center;
+        @include static-font-size($s);
+        line-height: 1;
+        padding: 20px;
+        color: $white;
+        background-color: $primary-color;
+        text-transform: uppercase;
+      }
+    }  
+  }
+
+}

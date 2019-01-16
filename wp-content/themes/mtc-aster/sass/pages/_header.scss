@@ -1,0 +1,408 @@
+#dummy{
+  height:97px;
+  display:none;
+  &.scroll{
+    display:block;
+    @include breakpoint(tablet){
+      display:none;
+    }
+  }
+}
+
+#header{
+	width: 100%;
+  .header-content{
+    background-color:$primary-color;
+    padding: 30px 0;  
+    @include breakpoint(tablet){
+      background:none;
+      padding: 0;
+    }
+    #priority-nav{
+      display: none;
+      width: fit-content;
+      text-align: right;
+      vertical-align: top;
+      padding-right: 60px;
+      padding-top: 40px;
+      ul{
+        li{
+          display:inline-block;
+          margin: 0 10px;
+          a{
+            //color:$secondary-color;
+          }
+        }
+      }
+      @media screen and ( min-width: 782px ) {
+        display: table-cell;
+      }
+    }
+    .phone-address-container{
+        position: absolute;
+        z-index:1;
+        padding: 5px 0;
+        @include breakpoint(tablet){       
+          top: 58px;
+          left: 80px;
+        }
+      .address, .phone{
+        display: none;
+        @include breakpoint(tablet){
+          display: inline-block;
+        }
+        a{
+          color:$white;
+        }
+      }
+      .link.mobile-icon{
+        display:inline-block;
+        @include static-font-size(2.2);
+        padding-left:15px;
+        @include breakpoint(tablet){
+          display:none;
+        }
+        a{
+          color:$white;
+        }
+      }
+    }
+    .logo{
+      width: 300px;
+      text-align: center;
+      margin: 0 auto;
+      @include breakpoint(tablet){
+        position: absolute;
+        z-index:1;
+        left: 0;
+        right: 0;
+        top: 31px;
+      }
+      a{
+        img{
+          max-height: 35px;
+          @include breakpoint(tablet){
+            max-height: 70px;
+            max-width: 260px;
+          }
+        }
+      }
+    }
+    .header-icons-container{
+      display:none;
+      @include breakpoint(tablet){
+        position:absolute;
+        z-index:1;
+        top: 52px;
+        right: 130px;
+        width: 100px;
+        border-right: 1px solid white;
+        padding: 6px 0;
+        @include flex;
+        justify-content: space-evenly;
+      }
+      a{
+        @include flex-item;
+        color:$white;
+      }
+    }
+  }
+
+  &.scroll{
+    background-color:$primary-color;
+    position: fixed;
+    z-index: 2;
+
+    .header-content{
+      padding: 30px 0;  
+
+        //.phone-address-container{
+          //   position: absolute;
+          //   z-index:1;
+          //   padding: 5px 0;
+          //   @include breakpoint(tablet){
+          //     top: 58px;
+          //     left: 80px;
+          //   }
+          // .address, .phone{
+          //   display: none;
+          //   @include breakpoint(tablet){
+          //     display: inline-block;
+          //   }
+          //   a{
+          //     color:$white;
+          //   }
+          // }
+
+          // .link.mobile-icon{
+          //   display:inline-block;
+          //   @include static-font-size(2.2);
+          //   padding-left:15px;
+          //   @include breakpoint(tablet){
+          //     display:none;
+          //   }
+          //   a{
+          //     color:$white;
+          //   }
+          // }
+        //}
+        .logo{
+          position:inherit;
+          // width: 300px;
+          // text-align: center;
+          // margin: 0 auto;
+          // a{
+          //   img{
+          //     max-height: 70px;
+          //     max-width: 260px;
+          //   }
+          // }
+        }
+        // .header-icons-container{
+        //   display:none;
+        //   @include breakpoint(tablet){
+        //     position:absolute;
+        //     z-index:1;
+        //     top: 52px;
+        //     right: 130px;
+        //     width: 100px;
+        //     border-right: 1px solid white;
+        //     padding: 6px 0;
+        //     @include flex;
+        //     justify-content: space-evenly;
+        //   }
+        //   a{
+        //     @include flex-item;
+        //     color:$white;
+        //   }
+        // }
+      }
+
+
+
+
+
+
+
+
+
+
+  }
+}
+
+
+// Navigation Trigger
+  #nav-trigger {
+    z-index:5;
+    right: 25px;
+    position: absolute;
+    cursor: pointer;
+    height: 26px;
+    width: 33px;
+    top: 37px;
+    //@include breakpoint(tablet) { top: 35px; }
+    @include breakpoint(tablet) { 
+      top: 58px;
+      right: 80px;
+    }
+    &:focus{
+      outline: auto 5px Highlight; //Firefox (508 compliance)
+      outline:-webkit-focus-ring-color auto 5px; //Chrome (508 compliance)
+    }
+    &.scroll{
+      position: fixed;
+      z-index:10;
+    }
+    .trigger-wrap {
+      position: relative;
+      span {
+        margin: 0 auto;
+        display: block;
+        top: 9px;
+        height: 2px;
+        position: absolute;
+        background-color: $white;
+        opacity: 1;
+        right: 0;
+        width: 33px;
+        @include border-radius(3px);
+        @include transition(all .25s ease-in-out);
+        &:first-child {  top: 0px; }
+        &:last-child { top: 18px; }
+      }
+    }
+
+    // Active Menu
+    &.active {
+      position: fixed;
+      @include breakpoint(ten) { 
+        //top: 94px; 
+      }
+      .trigger-wrap {
+        span {
+          background-color: $white;
+          @include transform-origin(center);
+          &:first-child, &:last-child {
+            @include transform(rotate(45deg));
+            top: 12px;
+            right: 0px;
+          }
+          &:nth-child(2) {
+            opacity: 0;
+            top: 12px;
+          }
+          &:last-child {
+            @include transform(rotate(-45deg));
+          }
+        }
+      }
+      // Active Trigger Hover
+      &:hover {
+        .trigger-wrap {
+          span { background: #999; }
+        }
+      }
+    }
+  }
+
+
+//Navigation Container
+#navigation-container {
+  position: fixed;
+  width: 100%;
+  right: -100%;
+  opacity:0.95;
+  height: 100vh;
+  top: 0;
+  z-index: 3;
+  overflow: scroll;
+  background-color: $tertiary-color;
+  .inner-container{
+    padding: 130px 15%;  
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(tablet) {
+      padding: 20px 50px;
+      max-width: 1280px;
+      //align-items: center;
+      min-width: 500px;
+      justify-content: center;
+    }
+    @include breakpoint(ten){
+      padding: 0 100px 0 20px;
+    }
+  }
+  // .column-grass{
+  //     display:none;
+  //   @include breakpoint(tablet){
+  //     display:block;
+  //     width:55px;
+  //     display: flex;
+  //     flex-direction: column;
+  //     justify-content: center;
+  //     padding-bottom: 251px;
+  //   }
+  //   @include breakpoint(ten){
+  //     padding-bottom: 257px;
+  //   }    
+  //   @include breakpoint(sixteen){
+  //     padding-bottom: 272px;
+  //   }
+
+  // }
+  @include box-sizing(border-box);
+  @include breakpoint(tablet) {
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  @include breakpoint(ten) {
+    display: flex;
+  }
+  @include breakpoint(fourteen) { 
+     
+  }
+  @extend .ease;
+  &.active {
+    right: 0;
+  }
+  nav#navigation {
+    //max-height: 50%;
+    //height: 100%;
+    width: 100%;
+    @include breakpoint(tablet) {
+      width: 66%;
+      margin:0;
+      text-align: left;
+    }
+    #menu-main-navigation{
+      //width: 66%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      //min-width: 100vw;
+      @include breakpoint(tablet){
+        flex-wrap: wrap;
+        height: 330px;
+      }
+    }
+    .menu-main-menu {
+      li {
+        display: block;
+        //margin: 0 auto;
+        padding: 20px 0;
+        @include breakpoint(tablet) {
+            width: auto; 
+            padding: 12px 20px;
+        }
+        a {
+          text-decoration: none;
+          text-transform: uppercase;
+          color: white;
+          letter-spacing:2px;
+          @include font-family($primary-font);
+          @include static-font-size(2.5);
+          @extend .ease;
+          @include breakpoint(tablet) { 
+            @include static-font-size(3.5); 
+          }
+          &:hover {
+            position:relative;
+            //color: $ltgray;
+          }
+          &:hover:before{
+            @include breakpoint(tablet) {
+              content: url('../images/grass_white.svg');
+              width: 55px;
+              position: absolute;
+              left: -60px;
+              display: block;
+              top: -23px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .secondary {
+    max-width: 210px;
+    padding: 0 20px;
+    @include breakpoint(tablet) {
+      max-width: 260px;
+    }
+
+    ul{
+
+      li{
+
+        a{
+          color:$white;
+          line-height:2;
+        }
+      }
+    }
+
+  }
+}

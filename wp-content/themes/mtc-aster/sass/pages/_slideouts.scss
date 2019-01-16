@@ -1,0 +1,267 @@
+/* SLIDEOUTS */
+#slideout1,
+#slideout1-mobile{
+  color:$tertiary-color;
+  background-color:$white;
+  .slideout-outer-wrapper{
+    .slideout-inner-wrap{
+      color:$tertiary-color;
+      background-color:$white;
+    }
+  }
+} 
+#slideout2,
+#slideout2-mobile{
+  color:$white;
+  background-color:$tertiary-color;
+  .slideout-outer-wrapper{
+    .slideout-inner-wrap{
+      color:$white;
+      background-color:$tertiary-color;
+
+        //overriding contact form styles
+        .content-form{
+          .frm_forms{
+            form{
+              .frm_message,.frm_error{
+                color:$white;
+              }
+              .frm_error{
+                padding:3px 0 0;
+                text-align:left;
+                position: inherit;
+                bottom: inherit;
+              }
+              .frm_form_fields{
+                fieldset{
+                  label{
+                    @include static-font-size(1.6);
+                    .frm_error{
+                      color:$primary-color;
+                    }
+                  }
+                  input[type="text"],
+                  input[type="email"]{
+                    color:$white;
+                    padding:5px;
+                    text-transform:none;
+                    @include static-font-size(1.4);
+                    letter-spacing:1px;
+                  }
+                  .frm_submit { 
+                    .submit-button {
+                      width: 130px;
+                      background: $light-gray;
+                      input{
+                        padding:8px 0;
+                      }
+                    }
+                  }
+
+                }
+              }
+            }
+          }
+        }
+
+    }
+  }
+}
+
+#slideout1, #slideout2 {
+  display:none;
+  float:left;
+  z-index: 6;
+  width:50%;
+
+  @extend .ease;
+  @include breakpoint(tablet) {
+    width:inherit;
+    display: block;
+    opacity:1;
+    position: fixed;
+    //top: 200px;
+    right: -555px;
+    max-width: 600px;
+    z-index: 3;
+  }
+  &.active {
+    top: 87px;
+    @include breakpoint(tablet) {
+      top: 200px;
+      right: 0;
+    }
+    .fa-chevron-down {
+      @include transform(rotate(180deg));
+    }
+  }
+  .slideout-outer-wrapper {
+    position:relative;
+    @include breakpoint(tablet) {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    .button-wrap {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 15px;
+      @include appearance(none);
+      border: 0 ;
+      @include static-font-size($m);
+      @include breakpoint(tablet) {
+        @include transform(rotate(-180deg));
+        writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        min-height: 90px;
+      }
+      // Trigger Hover
+      &:hover {
+        cursor: pointer;
+      }
+      .fa-chevron-down {
+        padding: 0 10px;
+        @include breakpoint(tablet) { display: none; }
+      }
+    }
+    .slideout-inner-wrap {
+      padding: 15px 0;
+      margin: 0 20px;
+      @include box-sizing(border-box);
+      position: relative;
+      z-index: 2;
+      width:512px;
+      .content {
+        text-align: left;
+
+        .icon-close {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        .title {
+          //@include font-size($p-medium);
+          @include static-font-size($m);
+          font-weight: $bold;
+          line-height: 1.25;
+          margin: 0 0 15px;
+        }
+        .copy {
+          @include static-font-size($m);
+          line-height: 1.25;
+        }
+        .disclaimer{
+          margin: 15px 0 0;
+          @include static-font-size($xs);
+          line-height: 1.25;
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
+
+.slideouts-container-mobile{
+  position:relative;
+}
+
+#slideout1-mobile, #slideout2-mobile {
+  float:left;
+  z-index: 6;
+  width:50%;
+  @extend .ease;
+  @include breakpoint(tablet) {
+    display: none;
+  }
+  &.active-mobile {
+    display:block;
+    .fa-chevron-down {
+      @include transform(rotate(180deg));
+    }
+    .slideout-outer-wrapper{
+      .slideout-inner-wrap{
+        display:block;
+        position: absolute;
+        top: 36px;
+        width: 100vw;
+        left: 0;
+      }
+    }
+  }
+  .slideout-outer-wrapper {
+    //position:relative;
+    @include breakpoint(tablet) {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    .button-wrap {
+      @include appearance(none);
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      border: 0 ;
+      @include static-font-size($s);
+      padding: 10px;
+      @include breakpoint(tablet) {
+        padding: 20px;
+        @include static-font-size($m);
+        @include transform(rotate(-180deg));
+        writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+      }
+      // Trigger Hover
+      &:hover {
+        cursor: pointer;
+      }
+      .fa-chevron-down {
+        padding: 0 10px;
+        @include breakpoint(tablet) { display: none; }
+      }
+    }
+    .slideout-inner-wrap {
+      display:none;
+      padding: 20px 18px;
+      @include box-sizing(border-box);
+      position: relative;
+      z-index: 2;
+      @extend .ease;
+      .content {
+        text-align: left;
+
+        .icon-close {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        .title {
+          @include static-font-size($s);
+          @include breakpoint(tablet) {
+            @include static-font-size($m);
+          }
+          font-weight: $bold;
+          line-height: 1.25;
+          margin: 0 0 15px;
+        }
+        .copy {
+          @include static-font-size($s);
+          @include breakpoint(tablet) {
+            @include static-font-size($m);
+          }
+          line-height: 1.25;
+        }
+        .disclaimer{
+          margin: 15px 0 0;
+          @include static-font-size($xs);
+          line-height: 1.25;
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
